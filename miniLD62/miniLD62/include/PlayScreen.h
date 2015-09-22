@@ -15,8 +15,7 @@ public:
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 private:
-	sf::Font font;						//Testing
-	sf::Text Text_PlayScreen;
+
 	//Player
 	//Map/Grid
 	//Background

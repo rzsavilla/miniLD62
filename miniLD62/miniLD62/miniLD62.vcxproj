@@ -70,14 +70,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\ExitScreen.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\GameOverScreen.cpp" />
     <ClCompile Include="src\InputHandler.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\PlayScreen.cpp" />
     <ClCompile Include="src\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\ExitScreen.h" />
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\GameOverScreen.h" />
     <ClInclude Include="include\InputHandler.h" />
     <ClInclude Include="include\MyEnum.h" />
     <ClInclude Include="include\PlayScreen.h" />

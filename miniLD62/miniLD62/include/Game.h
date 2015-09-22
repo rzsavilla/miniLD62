@@ -7,6 +7,8 @@
 
 #include <StartScreen.h>
 #include <PlayScreen.h>
+#include <ExitScreen.h>
+
 class Game
 {
 public:

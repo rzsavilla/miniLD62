@@ -31,11 +31,23 @@ void StartScreen::setText(sf::Text& text, sf::Font& font, sf::Color color, int i
 	text.setCharacterSize(iSize);
 	text.setPosition(pos);
 	text.setString(string);
-
 	text.setOrigin(text.getGlobalBounds().width / 2, text.getGlobalBounds().height / 2);
 }
 
-void StartScreen::update(InputHandler& input)
+MyEnum::State StartScreen::update(InputHandler& input)
 {
+	MyEnum::State currentState = MyEnum::State::Start;
 
+	if (input.mouseCollision(Text_Play.getGlobalBounds())) {  //Mouse is on text
+		if (input.bLeftClick) {
+			currentState = MyEnum::State::Play;
+			input.bLeftClick = false;
+		}
+	} else if (input.mouseCollision(Text_Exit.getGlobalBounds())) {
+		if (input.bLeftClick) {
+			currentState = MyEnum::State::Exit;
+			input.bLeftClick = false;
+		}
+	}
+	return currentState;		//Returns Game State current/new
 }

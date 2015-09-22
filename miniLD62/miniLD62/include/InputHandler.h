@@ -15,6 +15,8 @@ public:
 	void handleKeyPress(sf::Keyboard::Key key, bool isPressed);
 	void handleMousePress(sf::Mouse::Button button, bool isPressed);
 	void handleMouseMove(sf::Vector2i pos);
+
+	bool mouseCollision(sf::FloatRect rect);
 public:
 	bool bUp, bDown, bLeft, bRight;
 	bool bSpace;

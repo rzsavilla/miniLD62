@@ -1,5 +1,5 @@
 #include <Inputhandler.h>
-
+#include <iostream>
 InputHandler::InputHandler()
 {
 	initialize();
@@ -81,6 +81,16 @@ void InputHandler::handleMousePress(sf::Mouse::Button button, bool isPressed)
 
 void InputHandler::handleMouseMove(sf::Vector2i pos)
 {
+	//Update Position and Rect;
 	mousePos = pos;
 	mouseRect = sf::FloatRect(pos.x,pos.y,1,1);
+}
+
+bool InputHandler::mouseCollision(sf::FloatRect rect)
+{
+	bool bCollision = false;
+	if (mouseRect.intersects(rect)) {
+		bCollision = true;
+	}
+	return bCollision;
 }
