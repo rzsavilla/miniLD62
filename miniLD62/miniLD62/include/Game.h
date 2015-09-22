@@ -6,7 +6,7 @@
 #include <MyEnum.h>
 
 #include <StartScreen.h>
-
+#include <PlayScreen.h>
 class Game
 {
 public:
@@ -21,6 +21,7 @@ private:
 	MyEnum::State gameState;
 
 	StartScreen Start_Screen;
+	PlayScreen Play_Screen;
 private:
 	void handleEvents();
 	void update(sf::Time dt);

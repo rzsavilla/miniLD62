@@ -1,25 +1,14 @@
-﻿Build started 22/09/2015 13:42:46.
-     1>Project "E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt src\Game.cpp src\StartScreen.cpp src\main.cpp
-         Game.cpp
-         Generating Code...
-         Compiling...
-         main.cpp
-         StartScreen.cpp
-     1>e:\onedrive\programming\c++ projects\minild62\minild62\minild62\src\startscreen.cpp(15): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>e:\onedrive\programming\c++ projects\minild62\minild62\minild62\src\startscreen.cpp(16): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-     1>e:\onedrive\programming\c++ projects\minild62\minild62\minild62\src\startscreen.cpp(17): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>e:\onedrive\programming\c++ projects\minild62\minild62\minild62\src\startscreen.cpp(17): warning C4244: 'argument' : conversion from 'unsigned int' to 'float', possible loss of data
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\Debug\miniLD62.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\Debug\miniLD62.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\Debug\miniLD62.lib" /MACHINE:X86 Debug\Game.obj
+﻿Build started 22/09/2015 14:24:35.
+     1>Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.lib" /MACHINE:X86 Debug\Game.obj
          Debug\InputHandler.obj
          Debug\main.obj
+         Debug\PlayScreen.obj
          Debug\StartScreen.obj
-         miniLD62.vcxproj -> E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\Debug\miniLD62.exe
-     1>Done Building Project "E:\OneDrive\Programming\C++ Projects\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)).
+     1>LINK : fatal error LNK1104: cannot open file 'sfml-graphics-d.lib'
+     1>Done Building Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:02.96
+Time Elapsed 00:00:00.44

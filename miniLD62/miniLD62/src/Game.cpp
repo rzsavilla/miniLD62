@@ -52,7 +52,9 @@ void Game::update(sf::Time dt)
 	switch (gameState)
 	{
 	case MyEnum::Start:
-
+		if (input.bSpace) {
+			gameState = MyEnum::Play;
+		}
 		break;
 	case MyEnum::Play:
 		break;
@@ -66,22 +68,20 @@ void Game::update(sf::Time dt)
 		break;
 	}
 	//StartScreen
-
 	//PlayScreen
-
 	//PauseScreen
 }
 
 void Game::render()
 {
 	window.clear(sf::Color::Black);
-
 	switch (gameState)
 	{
 	case MyEnum::Start:
 		window.draw(Start_Screen);
 		break;
 	case MyEnum::Play:
+		window.draw(Play_Screen);
 		break;
 	case MyEnum::Pause:
 		break;
@@ -90,6 +90,5 @@ void Game::render()
 	default:
 		break;
 	}
-
 	window.display();
 }
