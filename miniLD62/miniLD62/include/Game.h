@@ -33,6 +33,7 @@ private:
 	void updateStart(sf::Time dt);
 	void updatePlay(sf::Time dt);
 	void updatePause(sf::Time dt);
+
 };
 
 #endif

@@ -13,6 +13,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Animation">
+      <UniqueIdentifier>{00ffebc8-b061-4761-97ef-440843e4cdcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{ef88ee2a-32c3-4ee0-9c5f-b95a4d56cab3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Screens">
+      <UniqueIdentifier>{e6bff402-5448-4e7b-a03d-31d9e41b01af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Entity">
+      <UniqueIdentifier>{8d7e88ff-6a1b-435a-8b0f-81f85336a2c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{b22988f3-9ce7-46eb-b7ba-a85af8189bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Screens">
+      <UniqueIdentifier>{2c276294-03f2-4e27-be99-9d44d7b8b86c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -24,17 +42,32 @@
     <ClCompile Include="src\InputHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\StartScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\PlayScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\ExitScreen.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\GameOverScreen.cpp">
+    <ClCompile Include="src\Player.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AnimatedSprite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Health.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Moveable.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\StartScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameOverScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -47,17 +80,32 @@
     <ClInclude Include="include\MyEnum.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\AnimatedSprite.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Animation.h">
+      <Filter>Header Files\Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Moveable.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Health.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
     <ClInclude Include="include\StartScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Screens</Filter>
     </ClInclude>
     <ClInclude Include="include\PlayScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Screens</Filter>
     </ClInclude>
     <ClInclude Include="include\ExitScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Screens</Filter>
     </ClInclude>
     <ClInclude Include="include\GameOverScreen.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Screens</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Player.h">
+      <Filter>Header Files\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

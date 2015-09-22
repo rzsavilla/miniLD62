@@ -64,16 +64,17 @@ void Game::update(sf::Time dt)
 		gameState = Start_Screen.update(input);
 		break;
 	case MyEnum::Play:
-		std::cout << "Play Screen\n";
+		gameState = Play_Screen.update(input);
+		//std::cout << "Play Screen\n";
 		break;
 	case MyEnum::Pause:
-		std::cout << "Pause Screen\n";
+		//std::cout << "Pause Screen\n";
 		break;
 	case MyEnum::GameOver:
-		std::cout << "Game Over Screen\n";
+		//std::cout << "Game Over Screen\n";
 		break;
 	case MyEnum::Exit:
-		std::cout << "Exit Screen\n";
+		//std::cout << "Exit Screen\n";
 		break;
 	default:
 		break;
