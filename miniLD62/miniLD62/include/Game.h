@@ -5,6 +5,8 @@
 #include <InputHandler.h>
 #include <MyEnum.h>
 
+#include <StartScreen.h>
+
 class Game
 {
 public:
@@ -17,10 +19,17 @@ private:
 	InputHandler input;
 	sf::Clock timer;
 	MyEnum::State gameState;
+
+	StartScreen Start_Screen;
 private:
 	void handleEvents();
 	void update(sf::Time dt);
 	void render();
+
+	//Update Game Screens;
+	void updateStart(sf::Time dt);
+	void updatePlay(sf::Time dt);
+	void updatePause(sf::Time dt);
 };
 
 #endif

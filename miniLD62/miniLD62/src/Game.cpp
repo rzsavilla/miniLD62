@@ -12,6 +12,8 @@ void Game::initialize()
 	uiHeight = 480;
 	window.setSize(sf::Vector2u(uiWidth,uiHeight));
 	gameState = MyEnum::State::Start;					//Begins at the start screen
+
+	Start_Screen.initialize(sf::Vector2u(uiWidth,uiHeight));
 }
 
 void Game::run()
@@ -38,6 +40,10 @@ void Game::handleEvents()
 		} else if (event.type == sf::Event::KeyReleased) {
 			input.handleKeyPress(event.key.code, false);
 		}
+		//Mouse
+		if(event.type == sf::Event::MouseMoved) {
+			input.mousePos = sf::Mouse::getPosition(window);
+		}
 	}
 }
 
@@ -46,6 +52,7 @@ void Game::update(sf::Time dt)
 	switch (gameState)
 	{
 	case MyEnum::Start:
+
 		break;
 	case MyEnum::Play:
 		break;
@@ -67,11 +74,12 @@ void Game::update(sf::Time dt)
 
 void Game::render()
 {
-	window.clear(sf::Color::White);
+	window.clear(sf::Color::Black);
 
 	switch (gameState)
 	{
 	case MyEnum::Start:
+		window.draw(Start_Screen);
 		break;
 	case MyEnum::Play:
 		break;
