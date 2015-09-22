@@ -12,7 +12,7 @@ void StartScreen::initialize(sf::Vector2u screenSize)
 	if (!font.loadFromFile("assets/fonts/arial.ttf")) {
 		std::cout << "Font could not be loaded\n";
 	}
-	setText(Text_Title,font, sf::Color::Red, 100, sf::Vector2f(screenSize.x / 2, screenSize.y / 5), "Title");
+	setText(Text_Title,font, sf::Color::Red, 100, sf::Vector2f(screenSize.x / 2, screenSize.y / 5), "MiniLD62");
 	setText(Text_Play,font, sf::Color::Red, 30, sf::Vector2f(screenSize.x / 2, screenSize.y / 2), "Play");
 	setText(Text_Exit,font, sf::Color::Red, 30, sf::Vector2f(screenSize.x / 2, screenSize.y / 1.5), "Exit");
 }
