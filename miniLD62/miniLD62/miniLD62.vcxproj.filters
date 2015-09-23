@@ -69,6 +69,12 @@
     <ClCompile Include="src\GameOverScreen.cpp">
       <Filter>Source Files\Screens</Filter>
     </ClCompile>
+    <ClCompile Include="src\Boss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Projectile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Game.h">
@@ -106,6 +112,12 @@
     </ClInclude>
     <ClInclude Include="include\Player.h">
       <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Boss.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Projectile.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,7 @@ void Game::initialize()
 	uiWidth = 640;
 	uiHeight = 480;
 	window.setSize(sf::Vector2u(uiWidth,uiHeight));
+	window.setKeyRepeatEnabled(true);
 	gameState = MyEnum::State::Start;					//Begins at the start screen
 
 	Start_Screen.initialize(sf::Vector2u(uiWidth,uiHeight));
@@ -64,7 +65,7 @@ void Game::update(sf::Time dt)
 		gameState = Start_Screen.update(input);
 		break;
 	case MyEnum::Play:
-		gameState = Play_Screen.update(input);
+		gameState = Play_Screen.update(input, dt);
 		//std::cout << "Play Screen\n";
 		break;
 	case MyEnum::Pause:

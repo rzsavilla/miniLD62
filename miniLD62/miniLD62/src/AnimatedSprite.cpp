@@ -14,7 +14,7 @@ void AnimatedSprite::setAnimation(Animation& anim)
 	animation = anim;
 	setTexture(animation.spriteSheet);
 	setTextureRect(animation.getFrame(iFrame));
-	setOrigin(getTextureRect().width / 2, getTextureRect().height / 2);
+	//setOrigin(getTextureRect().width / 2, getTextureRect().height / 2);
 }
 
 void AnimatedSprite::play()

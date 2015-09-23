@@ -49,7 +49,7 @@ void InputHandler::handleKeyPress(sf::Keyboard::Key key, bool isPressed)
 		bUp = isPressed;
 		break;
 	case sf::Keyboard::Down:
-		bRight = isPressed;
+		bDown = isPressed;
 		break;
 	default:
 		break;

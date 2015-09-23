@@ -72,6 +72,7 @@
   <ItemGroup>
     <ClCompile Include="src\AnimatedSprite.cpp" />
     <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Boss.cpp" />
     <ClCompile Include="src\ExitScreen.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameOverScreen.cpp" />
@@ -81,11 +82,13 @@
     <ClCompile Include="src\Moveable.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\PlayScreen.cpp" />
+    <ClCompile Include="src\Projectile.cpp" />
     <ClCompile Include="src\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\AnimatedSprite.h" />
     <ClInclude Include="include\Animation.h" />
+    <ClInclude Include="include\Boss.h" />
     <ClInclude Include="include\ExitScreen.h" />
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\GameOverScreen.h" />
@@ -95,6 +98,7 @@
     <ClInclude Include="include\MyEnum.h" />
     <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\PlayScreen.h" />
+    <ClInclude Include="include\Projectile.h" />
     <ClInclude Include="include\StartScreen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

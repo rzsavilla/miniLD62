@@ -31,27 +31,11 @@ MyEnum::Direction Moveable::getDirection()
 	return direction;
 }
 
-void Moveable::moveUp()
+bool Moveable::isMoving()
 {
-	velocity.y -= fSpeed;
-	direction = MyEnum::Direction::Up;
+	if (velocity == sf::Vector2f(0.f,0.f)) {
+		return false;
+	} else {
+		return true;
+	}
 }
-
-void Moveable::moveDown()
-{
-	velocity.y += fSpeed;
-	direction = MyEnum::Direction::Down;
-}
-
-void Moveable::moveLeft()
-{
-	velocity.x -= fSpeed;
-	direction = MyEnum::Direction::Left;
-}
-
-void Moveable::moveRight()
-{
-	velocity.x += fSpeed;
-	direction = MyEnum::Direction::Right;
-}
-

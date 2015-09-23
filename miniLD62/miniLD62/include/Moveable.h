@@ -14,16 +14,12 @@ public:
 
 	float getSpeed();
 	sf::Vector2f getVelocity();
-
 	MyEnum::Direction getDirection();			//get direction facing
+	bool isMoving();							//Checks velocity
 private:
 	float fSpeed;
+protected:
 	MyEnum::Direction direction;
 	sf::Vector2f velocity;
-protected:
-	void moveUp();
-	void moveDown();
-	void moveLeft();
-	void moveRight();
 };
 #endif
