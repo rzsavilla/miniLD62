@@ -10,24 +10,47 @@ void Player::initialize(sf::Vector2u screenSize)
 {
 	//Animation
 		//load/set Animations	
-	moveAnimation.setSpriteSheet("player.png");
-	moveAnimation.addFrames(sf::IntRect(0,0,32,32),3,moveAnimation.spriteSheet.getSize());
-	moveAnimation.setSpeed(0.5f);
+
+	spriteSheet.loadFromFile("assets/textures/villager.png");
+	idleAnimation.setSpriteSheet(spriteSheet);
+	idleAnimation.addFrames(sf::IntRect(0,0,32,32),2,spriteSheet.getSize());
+	idleAnimation.setSpeed(0.5f);
+	movingUp.setSpriteSheet(spriteSheet);
+	movingDown.setSpriteSheet(spriteSheet);
+	movingLeft.setSpriteSheet(spriteSheet);
+	movingRight.setSpriteSheet(spriteSheet);
+	movingUp.addFrames(sf::IntRect(0,64,32,32),2,spriteSheet.getSize());
+	movingDown.addFrames(sf::IntRect(0,32,32,32),2,spriteSheet.getSize());
+	movingLeft.addFrames(sf::IntRect(0,98,32,32),2,spriteSheet.getSize());
+	movingRight.addFrames(sf::IntRect(0,128,32,32),2,spriteSheet.getSize());
+	movingUp.setSpeed(0.2f);
+	movingDown.setSpeed(0.2f);
+	movingLeft.setSpeed(0.2f);
+	movingRight.setSpeed(0.2f);
+
 	loopAnimation(true);
-	setAnimation(moveAnimation);
+	setAnimation(movingUp);
 	play();							//Start Animation
 
 	setSpeed(100.f);
+	setHealth(100);
+	iLives = 3;
 	fMoveDist = 32;
-	setPosition((screenSize.x / 2) + 16, screenSize.y - ((getTextureRect().height)* 2) + 16);
+	//Starting Position
+	setPosition((screenSize.x / 2) + 16, screenSize.y - ((getTextureRect().height)* 2) - 48);
 	bJustMoved = false;
-	setMoveDelay(0.5f);				//Delay time before player can move again;
+	setMoveDelay(0.8f);				//Delay time before player can move again;
 }
 
 void Player::update(InputHandler& input, sf::Time dt)
 {
 	animate();						//Update Animation
 	playerInputs(input, dt);			//Check inputs
+}
+
+int Player::getLives()
+{
+	return iLives;
 }
 
 void Player::setMoveDelay(float Delay)
@@ -42,25 +65,34 @@ void Player::playerInputs(InputHandler& input, sf::Time dt)
 			//Change Velocity/Move
 			if (input.bUp) {
 				moveUp();
+				setAnimation(movingUp);
 				bJustMoved = true;
 			} else if (input.bDown) {
 				moveDown();
+				setAnimation(movingDown);
 				bJustMoved = true;
 			} else if (input.bLeft) {
 				moveLeft();
+				setAnimation(movingLeft);
 				bJustMoved = true;
 			} else if (input.bRight) {
 				moveRight();
+				setAnimation(movingRight);
 				bJustMoved = true;
+			} else {
+				setAnimation(idleAnimation);
 			}
+
 			if (bJustMoved) {
+				
 				moveTimer.restart();
 			}
 			input.bUp = false, input.bDown = false; 
 			input.bLeft = false, input.bRight = false;
 		}
+
+		
 	}
-	
 	updateMovement(dt);
 	//std::cout << velocity.y << std::endl;
 	if (bJustMoved) {
@@ -69,7 +101,6 @@ void Player::playerInputs(InputHandler& input, sf::Time dt)
 			moveTimer.restart();
 		}
 	}
-
 }
 
 void Player::calcNewPos()
@@ -140,4 +171,3 @@ void Player::updateMovement(sf::Time dt)
 		move(velocity * dt.asSeconds());
 	}
 }
-

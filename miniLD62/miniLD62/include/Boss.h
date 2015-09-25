@@ -5,14 +5,17 @@
 #include <Animation.h>
 #include <Health.h>
 
+#include <Inputhandler.h>
+
 class Boss: public AnimatedSprite, public Health
 {
 public:
 	Boss();
-
 	void initialize();
-private:
 
+	void update();
+private:
+	Animation animation;
 };
 
 #endif

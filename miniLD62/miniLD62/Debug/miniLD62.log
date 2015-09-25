@@ -1,14 +1,28 @@
-﻿Build started 22/09/2015 14:24:35.
+﻿Build started 25/09/2015 09:50:43.
      1>Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" on node 2 (Build target(s)).
      1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.lib" /MACHINE:X86 Debug\Game.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.lib" /MACHINE:X86 Debug\AnimatedSprite.obj
+         Debug\Animation.obj
+         Debug\Boss.obj
+         Debug\Destroyed.obj
+         Debug\ExitScreen.obj
+         Debug\Game.obj
+         Debug\GameOverScreen.obj
+         Debug\Health.obj
+         Debug\Hud.obj
          Debug\InputHandler.obj
          Debug\main.obj
+         Debug\Moveable.obj
+         Debug\Player.obj
          Debug\PlayScreen.obj
+         Debug\Projectile.obj
+         Debug\ProjectileHandler.obj
+         Debug\Resources_Text.obj
          Debug\StartScreen.obj
-     1>LINK : fatal error LNK1104: cannot open file 'sfml-graphics-d.lib'
-     1>Done Building Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)) -- FAILED.
+         LINK : H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe not found or not built by the last incremental link; performing full link
+         miniLD62.vcxproj -> H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe
+     1>Done Building Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.44
+Time Elapsed 00:00:01.03

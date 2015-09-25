@@ -8,14 +8,16 @@ Game::Game()
 
 void Game::initialize()
 {
+	textResources.initialize();
 	uiWidth = 640;
 	uiHeight = 480;
 	window.setSize(sf::Vector2u(uiWidth,uiHeight));
 	window.setKeyRepeatEnabled(true);
+	window.setFramerateLimit(60);
 	gameState = MyEnum::State::Start;					//Begins at the start screen
 
-	Start_Screen.initialize(sf::Vector2u(uiWidth,uiHeight));
-	Play_Screen.initialize(sf::Vector2u(uiWidth,uiHeight));
+	Start_Screen.initialize(sf::Vector2u(uiWidth,uiHeight), textResources);
+	Play_Screen.initialize(sf::Vector2u(uiWidth,uiHeight), textResources);
 }
 
 void Game::run()

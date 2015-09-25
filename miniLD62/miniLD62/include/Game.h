@@ -4,10 +4,12 @@
 #include <SFML/Graphics.hpp>
 #include <InputHandler.h>
 #include <MyEnum.h>
+#include <Resources_Text.h>
 
 #include <StartScreen.h>
 #include <PlayScreen.h>
 #include <ExitScreen.h>
+#include <Resources_Text.h>
 
 class Game
 {
@@ -21,6 +23,7 @@ private:
 	InputHandler input;
 	sf::Clock timer;
 	MyEnum::State gameState;
+	Resources_Text textResources;
 
 	StartScreen Start_Screen;
 	PlayScreen Play_Screen;

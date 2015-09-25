@@ -4,9 +4,9 @@
 #include <Moveable.h>
 #include <Animation.h>
 #include <AnimatedSprite.h>
-#include <SFML/Graphics/RectangleShape.hpp>
+#include <Destroyed.h>
 
-class Projectile: public Moveable, public sf::RectangleShape
+class Projectile: public Moveable, public Destroyed, public AnimatedSprite
 {
 public:
 	Projectile();

@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Animation">
-      <UniqueIdentifier>{00ffebc8-b061-4761-97ef-440843e4cdcc}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Components">
       <UniqueIdentifier>{ef88ee2a-32c3-4ee0-9c5f-b95a4d56cab3}</UniqueIdentifier>
     </Filter>
@@ -31,6 +28,15 @@
     <Filter Include="Source Files\Screens">
       <UniqueIdentifier>{2c276294-03f2-4e27-be99-9d44d7b8b86c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Components\Animation">
+      <UniqueIdentifier>{e9c9c5c5-0470-4b04-a1c8-9f72544ed561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components\Animation">
+      <UniqueIdentifier>{00ffebc8-b061-4761-97ef-440843e4cdcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Entity">
+      <UniqueIdentifier>{4eb3da1f-4c25-434e-a90d-cc4a44f992c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -40,18 +46,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\InputHandler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ExitScreen.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Animation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\AnimatedSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Health.cpp">
@@ -69,10 +63,34 @@
     <ClCompile Include="src\GameOverScreen.cpp">
       <Filter>Source Files\Screens</Filter>
     </ClCompile>
-    <ClCompile Include="src\Boss.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Source Files\Components\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AnimatedSprite.cpp">
+      <Filter>Source Files\Components\Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Destroyed.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ExitScreen.cpp">
+      <Filter>Source Files\Screens</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>Source Files\Entity</Filter>
     </ClCompile>
     <ClCompile Include="src\Projectile.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Boss.cpp">
+      <Filter>Source Files\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ProjectileHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Resources_Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hud.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -87,10 +105,10 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\AnimatedSprite.h">
-      <Filter>Header Files\Animation</Filter>
+      <Filter>Header Files\Components\Animation</Filter>
     </ClInclude>
     <ClInclude Include="include\Animation.h">
-      <Filter>Header Files\Animation</Filter>
+      <Filter>Header Files\Components\Animation</Filter>
     </ClInclude>
     <ClInclude Include="include\Moveable.h">
       <Filter>Header Files\Components</Filter>
@@ -118,6 +136,24 @@
     </ClInclude>
     <ClInclude Include="include\Projectile.h">
       <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Destroyed.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Boss_Head.h">
+      <Filter>Header Files\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ProjectileHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hud.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Resources_Text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Collision.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

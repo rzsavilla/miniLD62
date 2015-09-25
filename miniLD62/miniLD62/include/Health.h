@@ -9,7 +9,7 @@ public:
 	void setHealth(int Health);
 	void damage(int Damage);			//take away from health
 
-	int getHealth();
+	int& getHealth();
 	bool isDead();						//Checks play Health
 private:
 	int iHealth;
