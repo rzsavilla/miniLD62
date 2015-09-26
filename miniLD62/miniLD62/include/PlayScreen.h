@@ -14,6 +14,11 @@
 #include <Player.h>
 #include <Boss.h>
 
+#include <Projectile.h>
+#include <ProjectileHandler.h>
+
+#include <SFML/Graphics/RectangleShape.hpp>
+
 class PlayScreen: public sf::Drawable
 {
 public:
@@ -24,7 +29,6 @@ public:
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const;
 private:
-
 	//Hud
 	Hud hud;
 
@@ -40,11 +44,21 @@ private:
 	Boss boss;
 	int BossHealth;
 
+	//Projectiles
+	Projectile rock;
+	ProjectileHandler bullets;
+
+	//Animation
+	Animation rock_Animation;
+	Animation bullet_Explode;
+
 	//Player
 	//Map/Grid
 	//Background
 	//Projectiles
 	//Collision
+
+	sf::RectangleShape shape;
 };
 
 #endif

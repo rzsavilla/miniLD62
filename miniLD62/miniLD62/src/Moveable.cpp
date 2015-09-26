@@ -1,4 +1,5 @@
 #include <Moveable.h>
+#include <iostream>
 
 Moveable::Moveable()
 : velocity(0,0)				//initialize
@@ -15,6 +16,12 @@ void Moveable::resetVelocity()
 {
 	velocity = sf::Vector2f(0.f,0.f);
 }
+
+void Moveable::allowMove(bool EnableMovement)
+{
+
+}
+
 
 float Moveable::getSpeed() 
 {
@@ -33,9 +40,9 @@ MyEnum::Direction Moveable::getDirection()
 
 bool Moveable::isMoving()
 {
+	bool bMoving = true;
 	if (velocity == sf::Vector2f(0.f,0.f)) {
-		return false;
-	} else {
-		return true;
+		bMoving = false;
 	}
+	return bMoving;
 }

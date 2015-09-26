@@ -27,6 +27,8 @@ void Game::run()
 		handleEvents();
 		update(dt);
 		render();
+		fps.update();
+		//std::cout << fps.getFPS() << std::endl;
 	}
 }
 
@@ -82,6 +84,7 @@ void Game::update(sf::Time dt)
 	default:
 		break;
 	}
+	//std::cout << fps.getFPS() << std::endl;
 }
 
 void Game::render()

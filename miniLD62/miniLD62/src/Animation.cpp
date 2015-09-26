@@ -61,3 +61,8 @@ void Animation::addFrames(sf::IntRect rect, int Number, sf::Vector2u size)
 		frames.push_back(sf::IntRect(X,Y,rect.width, rect.height));		//Add frame
 	}
 }
+
+sf::Texture* Animation::getTextureAddress()
+{
+	return &spriteSheet;
+}

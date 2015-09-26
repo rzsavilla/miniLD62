@@ -76,5 +76,5 @@ void Hud::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	
 	target.draw(Text_Health,states);
 	target.draw(Text_Lives,states);
-	target.draw(Text_BossHealth,states);
+	//target.draw(Text_BossHealth,states);
 }

@@ -26,6 +26,7 @@ public:
 	void addFrame(sf::IntRect rect);										//Add a single frame
 	void addFrames(sf::IntRect rect, int Number, sf::Vector2u size);		//Add Multiple frames	
 	
+	sf::Texture* getTextureAddress();
 	sf::Texture spriteSheet;
 private:
 	std::vector <sf::IntRect> frames;	//Stores frames

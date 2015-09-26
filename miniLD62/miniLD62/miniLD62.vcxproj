@@ -70,11 +70,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AnimatedRect.cpp" />
     <ClCompile Include="src\AnimatedSprite.cpp" />
     <ClCompile Include="src\Animation.cpp" />
     <ClCompile Include="src\Boss.cpp" />
     <ClCompile Include="src\Destroyed.cpp" />
     <ClCompile Include="src\ExitScreen.cpp" />
+    <ClCompile Include="src\Exploding_Bullet.cpp" />
+    <ClCompile Include="src\FPSCounter.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GameOverScreen.cpp" />
     <ClCompile Include="src\Health.cpp" />
@@ -90,6 +93,7 @@
     <ClCompile Include="src\StartScreen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\AnimatedRect.h" />
     <ClInclude Include="include\AnimatedSprite.h" />
     <ClInclude Include="include\Animation.h" />
     <ClInclude Include="include\Boss.h" />
@@ -97,6 +101,9 @@
     <ClInclude Include="include\Collision.h" />
     <ClInclude Include="include\Destroyed.h" />
     <ClInclude Include="include\ExitScreen.h" />
+    <ClInclude Include="include\Exploding_Bullet.h" />
+    <ClInclude Include="include\Explosion.h" />
+    <ClInclude Include="include\FPSCounter.h" />
     <ClInclude Include="include\Game.h" />
     <ClInclude Include="include\GameOverScreen.h" />
     <ClInclude Include="include\Health.h" />

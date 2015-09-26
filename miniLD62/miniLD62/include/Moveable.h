@@ -11,6 +11,7 @@ public:
 
 	void setSpeed(float Speed);
 	void resetVelocity();
+	void allowMove(bool EnableMovement);
 
 	float getSpeed();
 	sf::Vector2f getVelocity();

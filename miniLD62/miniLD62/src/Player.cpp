@@ -12,6 +12,7 @@ void Player::initialize(sf::Vector2u screenSize)
 		//load/set Animations	
 
 	spriteSheet.loadFromFile("assets/textures/villager.png");
+
 	idleAnimation.setSpriteSheet(spriteSheet);
 	idleAnimation.addFrames(sf::IntRect(0,0,32,32),2,spriteSheet.getSize());
 	idleAnimation.setSpeed(0.5f);
@@ -21,7 +22,7 @@ void Player::initialize(sf::Vector2u screenSize)
 	movingRight.setSpriteSheet(spriteSheet);
 	movingUp.addFrames(sf::IntRect(0,64,32,32),2,spriteSheet.getSize());
 	movingDown.addFrames(sf::IntRect(0,32,32,32),2,spriteSheet.getSize());
-	movingLeft.addFrames(sf::IntRect(0,98,32,32),2,spriteSheet.getSize());
+	movingLeft.addFrames(sf::IntRect(0,96,32,32),2,spriteSheet.getSize());
 	movingRight.addFrames(sf::IntRect(0,128,32,32),2,spriteSheet.getSize());
 	movingUp.setSpeed(0.2f);
 	movingDown.setSpeed(0.2f);
@@ -30,16 +31,15 @@ void Player::initialize(sf::Vector2u screenSize)
 
 	loopAnimation(true);
 	setAnimation(movingUp);
-	play();							//Start Animation
 
-	setSpeed(100.f);
+	setSpeed(50.f);
 	setHealth(100);
 	iLives = 3;
 	fMoveDist = 32;
 	//Starting Position
 	setPosition((screenSize.x / 2) + 16, screenSize.y - ((getTextureRect().height)* 2) - 48);
 	bJustMoved = false;
-	setMoveDelay(0.8f);				//Delay time before player can move again;
+	setMoveDelay(0.5f);				//Delay time before player can move again;
 }
 
 void Player::update(InputHandler& input, sf::Time dt)
@@ -60,39 +60,33 @@ void Player::setMoveDelay(float Delay)
 
 void Player::playerInputs(InputHandler& input, sf::Time dt)
 {
-	if (!bJustMoved) {						//Move Delay
-		if (!isMoving()) {
-			//Change Velocity/Move
-			if (input.bUp) {
-				moveUp();
-				setAnimation(movingUp);
-				bJustMoved = true;
-			} else if (input.bDown) {
-				moveDown();
-				setAnimation(movingDown);
-				bJustMoved = true;
-			} else if (input.bLeft) {
-				moveLeft();
-				setAnimation(movingLeft);
-				bJustMoved = true;
-			} else if (input.bRight) {
-				moveRight();
-				setAnimation(movingRight);
-				bJustMoved = true;
-			} else {
-				setAnimation(idleAnimation);
-			}
-
-			if (bJustMoved) {
-				
-				moveTimer.restart();
-			}
-			input.bUp = false, input.bDown = false; 
-			input.bLeft = false, input.bRight = false;
-		}
-
-		
+	//Change Velocity/Move
+	if (input.bUp) {
+		moveUp();
+		setAnimation(movingUp);
+		bJustMoved = true;
+	} else if (input.bDown) {
+		moveDown();
+		setAnimation(movingDown);
+		bJustMoved = true;
+	} else if (input.bLeft) {
+		moveLeft();
+		setAnimation(movingLeft);
+		bJustMoved = true;
+	} else if (input.bRight) {
+		moveRight();
+		setAnimation(movingRight);
+		bJustMoved = true;
 	}
+	if (bJustMoved) {
+		moveTimer.restart();
+	} else {
+
+	}
+
+	input.bUp = false, input.bDown = false; 
+	input.bLeft = false, input.bRight = false;
+
 	updateMovement(dt);
 	//std::cout << velocity.y << std::endl;
 	if (bJustMoved) {
@@ -100,6 +94,11 @@ void Player::playerInputs(InputHandler& input, sf::Time dt)
 			bJustMoved = false;
 			moveTimer.restart();
 		}
+	}
+
+	//Shoot Projectile;
+	if (input.bSpace) {
+
 	}
 }
 
@@ -128,46 +127,60 @@ void Player::calcNewPos()
 
 void Player::moveUp()
 {
+	resetVelocity();
 	velocity.y = -getSpeed();
 	direction = MyEnum::Direction::Up;
-	calcNewPos();
 }
 
 void Player::moveDown()
 {
+	resetVelocity();
 	velocity.y = getSpeed();
 	direction = MyEnum::Direction::Down;
-	calcNewPos();
 }
 
 void Player::moveLeft()
 {
+	resetVelocity();
 	velocity.x = -getSpeed();
 	direction = MyEnum::Direction::Left;
-	calcNewPos();
 }
 
 void Player::moveRight()
 {
+	resetVelocity();
 	velocity.x = getSpeed();
 	direction = MyEnum::Direction::Right;
-	calcNewPos();
 }
 
 void Player::updateMovement(sf::Time dt) 
 {
 	if (isMoving()) {
+
+		switch (direction)
+		{
+		case MyEnum::Up:
+			setAnimation(movingUp);
+			break;
+		case MyEnum::Down:
+			setAnimation(movingDown);
+			break;
+		case MyEnum::Left:
+			setAnimation(movingLeft);
+			break;
+		case MyEnum::Right:
+			setAnimation(movingRight);
+			break;
+		default:
+			break;
+		}
+		play();			//Animation
 		//Calculate distance from target position
 			//Pythagoras
-		
-		float fDistance = sqrt((pow(targetpos.x - getPosition().x, 2) + (pow(targetpos.y - getPosition().y, 2))));
-		
-		if (fDistance < 5) {
-			resetVelocity();
-			setPosition(targetpos);
-		}
-		std::cout << fDistance << std::endl;
 		//Move
 		move(velocity * dt.asSeconds());
+		
+	} else {
+		stop();				//Stop animation when animation finishes playing;
 	}
 }

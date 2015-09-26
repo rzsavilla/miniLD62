@@ -5,11 +5,11 @@
 #include <InputHandler.h>
 #include <MyEnum.h>
 #include <Resources_Text.h>
+#include <FPSCounter.h>
 
 #include <StartScreen.h>
 #include <PlayScreen.h>
 #include <ExitScreen.h>
-#include <Resources_Text.h>
 
 class Game
 {
@@ -24,7 +24,7 @@ private:
 	sf::Clock timer;
 	MyEnum::State gameState;
 	Resources_Text textResources;
-
+	FPSCounter fps;
 	StartScreen Start_Screen;
 	PlayScreen Play_Screen;
 private:
