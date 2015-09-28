@@ -23,6 +23,36 @@ void ProjectileHandler::Shoot(sf::Vector2f position,sf::Vector2f target)
 	}
 }
 
+void ProjectileHandler::Shoot(sf::Vector2f position, MyEnum::Direction direction, float fSpeed)
+{
+	sf::Vector2f velocity(0.f,0.f);
+	switch (direction)
+	{
+	case MyEnum::Up:
+		velocity.y -=  fSpeed;
+		break;
+	case MyEnum::Down:
+		velocity.y +=  fSpeed;
+		break;
+	case MyEnum::Left:
+		velocity.x -=  fSpeed;
+		break;
+	case MyEnum::Right:
+		velocity.x +=  fSpeed;
+		break;
+	default:
+		break;
+	}
+	if (bHasProjectile) {
+		projectiles.push_back(projectile);
+		projectiles.back().setPosition(position);
+		projectiles.back().setVelocity(velocity);
+	} else {
+		std::cout << "No Projectile has been set\n";
+	}
+}
+
+
 void ProjectileHandler::updateProjectiles(sf::Time dt)
 {
 	for (int i = 0; i < projectiles.size(); i++) {
@@ -36,7 +66,7 @@ void ProjectileHandler::updateProjectiles(sf::Time dt)
 		//Check if destroyed
 		if (projectiles[i].isDestroyed()) {
 			//Animation if finished playing
-			projectiles.erase(projectiles.begin());
+			projectiles.erase(projectiles.begin() + i);
 		}
 		//Update Movement
 		projectiles[i].moveProjectile(dt);

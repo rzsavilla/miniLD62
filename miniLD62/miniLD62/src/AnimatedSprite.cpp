@@ -29,10 +29,12 @@ void AnimatedSprite::stop()
 }
 void AnimatedSprite::reset()
 {
+	frameUpdated = false;
 	iFrame = 0;
 }
 void AnimatedSprite::setFrame(int i) 
 {
+	frameUpdated = false;
 	iFrame = i;
 }
 void AnimatedSprite::loopAnimation(bool Loop)
@@ -65,6 +67,7 @@ void AnimatedSprite::animate()
 				iFrame++; //Next Frame
 				timer.restart();
 			} else {
+				/*
 				if (bLoop) {
 					reset();		//Return to first frame
 					timer.restart();
@@ -73,6 +76,7 @@ void AnimatedSprite::animate()
 					bFinished = true;		//Animation Cycle has finished
 					stop();					//Stop Animation
 				}
+				*/
 			}
 
 			if (iFrame >= animation.getFrameCount()) {
@@ -85,7 +89,8 @@ void AnimatedSprite::animate()
 					stop();					//Stop Animation
 				}
 			}
-			frameUpdated = false;
+			setTextureRect(animation.getFrame(iFrame));
+			//frameUpdated = false;
 		}
 	}
 }

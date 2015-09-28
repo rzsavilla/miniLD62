@@ -15,7 +15,7 @@ void Health::damage(int Damage)
 	iHealth -= Damage;
 }
 
-int& Health::getHealth()
+int Health::getHealth()
 {
 	return iHealth;
 }

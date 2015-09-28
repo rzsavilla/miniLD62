@@ -13,11 +13,12 @@ void Game::initialize()
 	uiHeight = 480;
 	window.setSize(sf::Vector2u(uiWidth,uiHeight));
 	window.setKeyRepeatEnabled(true);
-	window.setFramerateLimit(60);
+	window.setFramerateLimit(120);
 	gameState = MyEnum::State::Start;					//Begins at the start screen
 
 	Start_Screen.initialize(sf::Vector2u(uiWidth,uiHeight), textResources);
 	Play_Screen.initialize(sf::Vector2u(uiWidth,uiHeight), textResources);
+	Over_Screen.initialize(sf::Vector2u(uiWidth,uiHeight));
 }
 
 void Game::run()
@@ -89,7 +90,7 @@ void Game::update(sf::Time dt)
 
 void Game::render()
 {
-	window.clear(sf::Color::Black);
+	window.clear(sf::Color::Red);
 	switch (gameState)
 	{
 	case MyEnum::Start:
@@ -101,6 +102,7 @@ void Game::render()
 	case MyEnum::Pause:
 		break;
 	case MyEnum::GameOver:
+		window.draw(Over_Screen);
 		break;
 	default:
 		break;

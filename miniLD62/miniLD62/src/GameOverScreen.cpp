@@ -9,11 +9,11 @@ GameOverScreen::GameOverScreen()
 void GameOverScreen::initialize(sf::Vector2u screenSize)
 {
 	//Load Fonts
-	if (!font.loadFromFile("assets/fonts/arial.ttf")) {
+	if (!font.loadFromFile("assets/fonts/acme.ttf")) {
 		std::cout << "Font could not be loaded\n";
 	}
-	setText(Text_GameOver,font, sf::Color::Red, 100, sf::Vector2f(screenSize.x / 2, screenSize.y / 5), "MiniLD62");
-	setText(Text_Score,font, sf::Color::Red, 30, sf::Vector2f(screenSize.x / 2, screenSize.y / 2), "Play");
+	setText(Text_GameOver,font, sf::Color::White, 100, sf::Vector2f(screenSize.x / 2, screenSize.y / 5), "Game Over");
+	setText(Text_Score,font, sf::Color::White, 20, sf::Vector2f(screenSize.x / 2, screenSize.y / 2), "Game Still needs \n A lot of work \n Ran out of time");
 }
 
 void GameOverScreen::draw(sf::RenderTarget& target, sf::RenderStates states) const

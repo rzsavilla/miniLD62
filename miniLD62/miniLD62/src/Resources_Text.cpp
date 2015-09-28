@@ -11,6 +11,10 @@ void Resources_Text::initialize()
 	if (!arial.loadFromFile("assets/fonts/arial.ttf")) {
 		std::cout << "Arial Font could not be loaded\n";
 	}
+	if (!acme.loadFromFile("assets/fonts/acme.ttf")) {
+		std::cout << "Acme Font Could not be loaded\n";
+	}
+
 }
 
 void Resources_Text::setText(sf::Text& text, sf::Font& font, sf::Color color, int iSize, sf::Vector2f pos, std::string string)

@@ -6,6 +6,7 @@ Projectile::Projectile()
 {
 	reachedTarget = false;
 	bCollided = false;
+	bHasTarget = false;
 }
 
 void Projectile::set(float Speed, Animation& anim, sf::Vector2f pos) 
@@ -26,6 +27,7 @@ void Projectile::collided()
 void Projectile::setTargetPos(sf::Vector2f position) 
 {
 	targetPos = position;
+	bHasTarget = true;
 }
 
 void Projectile::setTargetPos(float x, float y)
@@ -46,26 +48,34 @@ bool Projectile::hasReachedTarget()
 
 void Projectile::moveProjectile(sf::Time dt)
 {
-	if (!reachedTarget) {
-		sf::Vector2f pos = getPosition();
-		fDistance = sqrt(pow(targetPos.x - pos.x,2) + pow(targetPos.y - pos.y,2));
+	sf::Vector2f pos = getPosition();
 
-		//Calculate new velocity
-		velocity.x = getSpeed() * (targetPos.x - pos.x) / fDistance;
-		velocity.y = getSpeed() * (targetPos.y - pos.y) / fDistance; 
+	if (bHasTarget) {
 
-		if (fDistance > -1 && fDistance < 1)
-		{
-			reachedTarget = true;
-			resetVelocity();
+		if (!reachedTarget) {
+		
+			fDistance = sqrt(pow(targetPos.x - pos.x,2) + pow(targetPos.y - pos.y,2));
+
+			//Calculate new velocity
+			velocity.x = getSpeed() * (targetPos.x - pos.x) / fDistance;
+			velocity.y = getSpeed() * (targetPos.y - pos.y) / fDistance; 
+
+			if (fDistance > -1 && fDistance < 1)
+			{
+				reachedTarget = true;
+				resetVelocity();
+			}
+		
 		}
-		move(getVelocity() * dt.asSeconds());
-
-		//Rotate to face the target
-		float dx = targetPos.x - pos.x;
-		float dy = targetPos.y - pos.y;
-		const float Pi = 3.141;
-
-		setRotation(atan2(dy,dx) * (180 / Pi) + 90); //Calculates rotation
 	}
+
+	//Rotate to face the target
+	float dx = targetPos.x - pos.x;
+	float dy = targetPos.y - pos.y;
+	const float Pi = 3.141;
+
+	setRotation(atan2(dy,dx) * (180 / Pi) + 90); //Calculates rotation
+
+
+	move(getVelocity() * dt.asSeconds());
 }

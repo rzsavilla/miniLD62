@@ -12,6 +12,12 @@ void Moveable::setSpeed(float Speed)
 	fSpeed = Speed;
 }
 
+void Moveable::setVelocity(sf::Vector2f vel)
+{
+	velocity.x = vel.x;
+	velocity.y = vel.y;
+}
+
 void Moveable::resetVelocity()
 {
 	velocity = sf::Vector2f(0.f,0.f);

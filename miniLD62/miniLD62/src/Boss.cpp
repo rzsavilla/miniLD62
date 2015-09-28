@@ -9,19 +9,25 @@ void Boss::initialize()
 	animation.setSpriteSheet("Spritesheet_Boss.png");
 	animation.addFrame(sf::IntRect(0,0,64,75));
 	animation.addFrame(sf::IntRect(64,0,64,75));
-	animation.setSpeed(0.5f);
+	animation.setSpeed(0.3f);
 	setAnimation(animation);
 	setPosition(320.f,150.f);
 	setHealth(1000);
 	setScale(2,2);
 	play();
-	loopAnimation(true);
+	loopAnimation(false);
 }
 
 void Boss::update(sf::Vector2f playerPos) 
 {
 	//Animation
 	animate();
+	//reset();		//reset Animation
+
+	if (isFinished()) {
+		setFrame(0);
+	}
+
 	//Movement/Rotation
 
 	/*

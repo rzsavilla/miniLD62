@@ -10,6 +10,7 @@ void InputHandler::initialize()
 	bUp = false, bDown = false, bLeft = false, bRight = false;
 	bSpace = false;
 	bLeftClick = false, bRightClick = false;
+	bOne = true ,bTwo = false,bThree = false,bFour = false;	
 	mousePos.x = 0.f;
 	mousePos.y = 0.f;
 	bPause = false;
@@ -50,6 +51,14 @@ void InputHandler::handleKeyPress(sf::Keyboard::Key key, bool isPressed)
 		break;
 	case sf::Keyboard::Down:
 		bDown = isPressed;
+		break;
+	case sf::Keyboard::Num1:
+		break;
+	case sf::Keyboard::Num2:
+		break;
+	case sf::Keyboard::Num3:
+		break;
+	case sf::Keyboard::Num4:
 		break;
 	default:
 		break;

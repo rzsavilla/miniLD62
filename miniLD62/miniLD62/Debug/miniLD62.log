@@ -1,28 +1,50 @@
-﻿Build started 25/09/2015 09:50:43.
+﻿Build started 28/09/2015 04:43:20.
      1>Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe" /INCREMENTAL /NOLOGO "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.lib" /MACHINE:X86 Debug\AnimatedSprite.obj
-         Debug\Animation.obj
-         Debug\Boss.obj
-         Debug\Destroyed.obj
-         Debug\ExitScreen.obj
-         Debug\Game.obj
-         Debug\GameOverScreen.obj
-         Debug\Health.obj
-         Debug\Hud.obj
-         Debug\InputHandler.obj
-         Debug\main.obj
-         Debug\Moveable.obj
-         Debug\Player.obj
-         Debug\PlayScreen.obj
-         Debug\Projectile.obj
-         Debug\ProjectileHandler.obj
-         Debug\Resources_Text.obj
-         Debug\StartScreen.obj
-         LINK : H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe not found or not built by the last incremental link; performing full link
-         miniLD62.vcxproj -> H:\C++\Games\miniLD62\miniLD62\Debug\miniLD62.exe
-     1>Done Building Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt cpp\PickupHandler.cpp src\AnimatedRect.cpp src\AnimatedSprite.cpp src\Animation.cpp src\Boss.cpp src\ExitScreen.cpp src\FPSCounter.cpp src\Game.cpp src\GameOverScreen.cpp src\Hud.cpp src\InputHandler.cpp src\Moveable.cpp src\Pickup.cpp src\PlayScreen.cpp src\Player.cpp src\Projectile.cpp src\ProjectileHandler.cpp src\Resources_Text.cpp src\StartScreen.cpp src\main.cpp
+         main.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\game.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         StartScreen.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\startscreen.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Resources_Text.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\resources_text.h(6): fatal error C1083: Cannot open include file: 'SFML/Graphics/Text.hpp': No such file or directory
+         ProjectileHandler.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\moveable.h(5): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Projectile.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\moveable.h(5): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Player.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedsprite.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         PlayScreen.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\playscreen.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics/Drawable.hpp': No such file or directory
+         Pickup.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedsprite.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Moveable.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\moveable.h(5): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         InputHandler.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\inputhandler.h(4): fatal error C1083: Cannot open include file: 'SFML/Window/Event.hpp': No such file or directory
+         Hud.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\hud.h(4): fatal error C1083: Cannot open include file: 'SFML/System/Vector2.hpp': No such file or directory
+         GameOverScreen.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\gameoverscreen.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Game.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\game.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         FPSCounter.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\fpscounter.h(4): fatal error C1083: Cannot open include file: 'SFML/System/Clock.hpp': No such file or directory
+         ExitScreen.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\exitscreen.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics/Drawable.hpp': No such file or directory
+         Boss.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedsprite.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Animation.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animation.h(9): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         AnimatedSprite.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedsprite.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         AnimatedRect.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedrect.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         PickupHandler.cpp
+     1>h:\c++\games\minild62\minild62\minild62\include\animatedsprite.h(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+         Generating Code...
+     1>Done Building Project "H:\C++\Games\miniLD62\miniLD62\miniLD62\miniLD62.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:01.03
+Time Elapsed 00:00:00.92
